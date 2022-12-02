@@ -3,7 +3,8 @@ package main
 import "fmt"
 
 func main() {
-	var input int
+	var input, angka1, angka2, hasil int
+
 	fmt.Println("Pilihan menu")
 	fmt.Println("1. Penjumlahan")
 	fmt.Println("2. Pengurangan")
@@ -13,4 +14,26 @@ func main() {
 	fmt.Println("9. EXIT")
 	fmt.Print("Masukkan menu: ")
 	fmt.Scanln(&input)
+	fmt.Print("Masukkan angka pertama")
+	fmt.Scanln(&angka1)
+	fmt.Print("Masukkan angka kedua")
+	fmt.Scanln(&angka2)
+	switch input {
+	case 1:
+		hasil = angka1 + angka2
+	case 2:
+		hasil = angka1 - angka2
+	case 3:
+		hasil = angka1 * angka2
+	case 4:
+		if angka2 > 0 {
+			hasil = angka1 / angka2
+		} else {
+			hasil = 0
+		}
+	case 5:
+	case 9:
+
+	}
+	fmt.Println("Hasil :", hasil)
 }
